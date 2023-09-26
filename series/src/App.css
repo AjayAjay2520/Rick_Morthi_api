@@ -1,0 +1,35 @@
+.badge{
+    top: 10px;
+    right: 20px;
+}
+.img_Cards{
+    border: 2px solid #6ea1ee;
+    border-radius: 10px;
+}
+.img_Cards img{
+    border-radius: 10px 10px 0 0;
+}
+.search_input{
+    width: 40%;
+    border-radius: 10px;
+    border:2px solid #6ea1ee;
+    padding: 10px 15px;
+    outline: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.search_form .btn{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.active{
+    border-bottom: 3px solid #0b5ed7 !important;
+    font-weight: bold ;
+    color:#0b5ed7 !important ;
+    width: auto;
+}
+
+@media (max-width:576px ){
+    .search_input{
+        width: 80%;
+    }
+    
+}

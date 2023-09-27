@@ -27,9 +27,17 @@
     width: auto;
 }
 
+
 @media (max-width:576px ){
     .search_input{
         width: 80%;
     }
+   
     
 }
+/* @media (max-width:425px ){
+     body{overflow-x: hidden; }
+     .pagination{
+        width: 80%;
+     }
+    } */

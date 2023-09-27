@@ -2,20 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom';
 
 
-const Cards = ({results,page}) => {
+const Cards = ({ results, page }) => {
     let display;
-    if (results){
-        display=results.map(a=>{
-            let{id,name,image,location,status}=a
-            return(
-                <Link 
-                    style={{textDecoration:"none" }}
-                    to={`${page}${id}`} 
-                    key={id} 
+    if (results) {
+        display = results.map(a => {
+            let { id, name, image, location, status } = a
+            return (
+                <Link
+                    style={{ textDecoration: "none" }}
+                    to={`${page}${id}`}
+                    key={id}
                     className="col-lg-4 col-md-6 col-12 position-relative  mb-4 text-dark "
                 >
                     <div className="img_Cards d-flex flex-column justify-content-center">
-                        <img src={image} alt="images"className='img-fluid' />
+                        <img src={image} alt="images" className='img-fluid' />
                         <div className="contant p-3 ">
                             <div className="fs-4 fw-bold mb-4">{name}</div>
                             <div className="">
@@ -24,34 +24,34 @@ const Cards = ({results,page}) => {
                             </div>
                         </div>
                     </div>
-                    {(()=>{
-                        if (status==="Dead"){
-                            return(
+                    {(() => {
+                        if (status === "Dead") {
+                            return (
                                 <div className="badge bg-danger position-absolute  ">{status}</div>
                             );
-                        }else if(status==="Alive"){
-                            return(
+                        } else if (status === "Alive") {
+                            return (
                                 <div className="badge bg-success position-absolute  ">{status}</div>
                             );
-                        }else{
-                            return(
+                        } else {
+                            return (
                                 <div className="badge bg-secondary position-absolute  ">{status}</div>
                             );
                         }
-                    })()}         
+                    })()}
                 </Link>
             )
         });
-    }else{
-        display="No Characters Found ...";
+    } else {
+        display = "No Characters Found ...";
     }
 
 
-  return (
-    <>
-    {display}
-    </>
-  )
+    return (
+        <>
+            {display}
+        </>
+    )
 }
 
 export default Cards
